@@ -26,8 +26,9 @@ public class config {
             Statement stmt = con.createStatement();
             result = true;
             con.close();
-            con=null;
             stmt=null;
+            con=null;
+            
         } catch (Exception e) {
             System.out.println(e);
         }

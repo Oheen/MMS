@@ -18,46 +18,34 @@ public class createUser extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         msg = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        dbName = new javax.swing.JTextField();
-        dbUserName = new javax.swing.JTextField();
+        adminName_label = new javax.swing.JLabel();
+        adminName = new javax.swing.JTextField();
+        adminEmail = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        dbHost = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        dbTablePrefix = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        dbPassword = new javax.swing.JPasswordField();
+        adminPassword = new javax.swing.JPasswordField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Admin Information");
+        setTitle("Antenna");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Enter admin Information "));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
         msg.setForeground(new java.awt.Color(255, 0, 0));
         msg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         msg.setText("   ");
         msg.setName(""); // NOI18N
 
-        jLabel2.setText("Database Name");
+        adminName_label.setText("Name");
 
-        dbName.setText("jh_erp");
+        adminName.setText("jh_erp");
 
-        dbUserName.setText("root");
+        adminEmail.setText("root");
 
-        jLabel3.setText("User Name");
+        jLabel3.setText("Email");
 
         jLabel4.setText("Password");
-
-        dbHost.setText("localhost");
-
-        jLabel5.setText("Host");
-
-        dbTablePrefix.setText("jh_erp");
-
-        jLabel6.setText("Table Prefix");
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -71,25 +59,17 @@ public class createUser extends javax.swing.JFrame {
                         .add(0, 0, Short.MAX_VALUE)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                             .add(jPanel1Layout.createSequentialGroup()
-                                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(adminName_label, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(adminName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbUserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(adminEmail, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbPassword))
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbHost, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbTablePrefix, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                                .add(adminPassword)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,25 +78,17 @@ public class createUser extends javax.swing.JFrame {
                 .add(msg)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel2)
-                    .add(dbName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(adminName_label)
+                    .add(adminName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel3)
-                    .add(dbUserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(adminEmail, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel4)
-                    .add(dbPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel5)
-                    .add(dbHost, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel6)
-                    .add(dbTablePrefix, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(183, Short.MAX_VALUE))
+                    .add(adminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         jButton3.setText("Cancel");
@@ -164,21 +136,16 @@ public class createUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         boolean ac= true;
 
-        String DATABASE_NAME=dbName.getText();
-        String DB_USERNAME=dbUserName.getText();
-        String DB_PASSWORD=dbPassword.getText();
-        String DB_HOST=dbHost.getText();
-        String DB_TABLEPREFIX=dbTablePrefix.getText();
+        String DATABASE_NAME=adminName.getText();
+        String DB_USERNAME=adminEmail.getText();
+        String DB_PASSWORD=adminPassword.getText();
         
         //check empty input fild
-        if(dbName.getText().isEmpty()){
+        if(adminName.getText().isEmpty()){
             msg.setText("Requir Database Name*");
             ac=false;
-        }else if(dbUserName.getText().isEmpty()){
+        }else if(adminEmail.getText().isEmpty()){
              msg.setText("Requir Database UserName*");
-            ac=false;
-        }else if(dbHost.getText().isEmpty()){
-             msg.setText("Requir Host name*");
             ac=false;
         }else{
             ac = true;
@@ -236,18 +203,14 @@ public class createUser extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField dbHost;
-    private javax.swing.JTextField dbName;
-    private javax.swing.JPasswordField dbPassword;
-    private javax.swing.JTextField dbTablePrefix;
-    private javax.swing.JTextField dbUserName;
+    private javax.swing.JTextField adminEmail;
+    private javax.swing.JTextField adminName;
+    private javax.swing.JLabel adminName_label;
+    private javax.swing.JPasswordField adminPassword;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel msg;
     // End of variables declaration//GEN-END:variables

@@ -74,29 +74,19 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel2" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="adminName_label" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dbName" min="-2" pref="319" max="-2" attributes="0"/>
+                                  <Component id="adminName" min="-2" pref="319" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dbUserName" min="-2" pref="319" max="-2" attributes="0"/>
+                                  <Component id="adminEmail" min="-2" pref="319" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel4" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dbPassword" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel5" min="-2" pref="120" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dbHost" min="-2" pref="319" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel6" min="-2" pref="120" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dbTablePrefix" min="-2" pref="319" max="-2" attributes="0"/>
+                                  <Component id="adminPassword" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -111,30 +101,20 @@
                   <Component id="msg" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dbName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminName_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dbUserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dbPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dbHost" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dbTablePrefix" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="183" max="32767" attributes="0"/>
+                  <EmptySpace pref="235" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -150,24 +130,24 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="adminName_label">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Database Name"/>
+            <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dbName">
+        <Component class="javax.swing.JTextField" name="adminName">
           <Properties>
             <Property name="text" type="java.lang.String" value="jh_erp"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dbUserName">
+        <Component class="javax.swing.JTextField" name="adminEmail">
           <Properties>
             <Property name="text" type="java.lang.String" value="root"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="User Name"/>
+            <Property name="text" type="java.lang.String" value="Email"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -175,27 +155,7 @@
             <Property name="text" type="java.lang.String" value="Password"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dbHost">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="localhost"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Host"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="dbTablePrefix">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jh_erp"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Table Prefix"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="dbPassword">
+        <Component class="javax.swing.JPasswordField" name="adminPassword">
         </Component>
       </SubComponents>
     </Container>
