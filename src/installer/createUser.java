@@ -2,7 +2,7 @@
 package installer;
 
 public class createUser extends javax.swing.JFrame {
-    
+        config checkSave = new config();
     /** Creates new form Antenna */
     public createUser() {
         initComponents();
@@ -24,8 +24,8 @@ public class createUser extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         adminPassword = new javax.swing.JPasswordField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        breakPrev = new javax.swing.JButton();
+        save = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Antenna");
@@ -91,12 +91,17 @@ public class createUser extends javax.swing.JFrame {
                 .addContainerGap(235, Short.MAX_VALUE))
         );
 
-        jButton3.setText("Cancel");
-
-        jButton4.setText("OK");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        breakPrev.setText("break");
+        breakPrev.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                breakPrevActionPerformed(evt);
+            }
+        });
+
+        save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveActionPerformed(evt);
             }
         });
 
@@ -109,13 +114,14 @@ public class createUser extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                        .add(jButton4)
+                        .add(0, 0, Short.MAX_VALUE)
+                        .add(breakPrev)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton3)))
+                        .add(save)))
                 .addContainerGap())
         );
 
-        layout.linkSize(new java.awt.Component[] {jButton3, jButton4}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+        layout.linkSize(new java.awt.Component[] {breakPrev, save}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
 
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -124,33 +130,58 @@ public class createUser extends javax.swing.JFrame {
                 .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton3)
-                    .add(jButton4))
+                    .add(breakPrev)
+                    .add(save))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
         boolean ac= true;
 
-        String DATABASE_NAME=adminName.getText();
-        String DB_USERNAME=adminEmail.getText();
-        String DB_PASSWORD=adminPassword.getText();
+        String ADMIN_NAME=adminName.getText();
+        String ADMIN_EMAIL=adminEmail.getText();
+        String ADMIN_PASSWORD=adminPassword.getText();
         
         //check empty input fild
         if(adminName.getText().isEmpty()){
-            msg.setText("Requir Database Name*");
+            msg.setText("Requir Name*");
             ac=false;
         }else if(adminEmail.getText().isEmpty()){
-             msg.setText("Requir Database UserName*");
+             msg.setText("Requir Email*");
+            ac=false;
+        }else if(adminPassword.getText().isEmpty()){
+             msg.setText("Requir Password*");
+            ac=false;
+        }else if(ADMIN_PASSWORD.length()>8){
+            msg.setText("Mastbe 8 char Password*");
             ac=false;
         }else{
             ac = true;
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+        
+        //=============================================================
+        if (ac) {
+            boolean result=checkSave.saveAdmin(ADMIN_NAME, ADMIN_EMAIL, ADMIN_PASSWORD);
+            
+            if(result){
+                complate comIn = new complate();
+                 dispose();
+                 comIn.setVisible(true);
+            }
+        }
+        
+    }//GEN-LAST:event_saveActionPerformed
+
+    private void breakPrevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_breakPrevActionPerformed
+        // TODO add your handling code here:
+        DB db =new DB();
+        dispose();
+        db.setVisible(true);
+    }//GEN-LAST:event_breakPrevActionPerformed
     
     /**
      * @param args the command line arguments
@@ -207,12 +238,12 @@ public class createUser extends javax.swing.JFrame {
     private javax.swing.JTextField adminName;
     private javax.swing.JLabel adminName_label;
     private javax.swing.JPasswordField adminPassword;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton breakPrev;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel msg;
+    private javax.swing.JButton save;
     // End of variables declaration//GEN-END:variables
     
 }
