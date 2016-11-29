@@ -23,11 +23,11 @@ public class DB extends javax.swing.JFrame {
         dbUserName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        dbPassword = new javax.swing.JTextField();
         dbHost = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         dbTablePrefix = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        dbPassword = new javax.swing.JPasswordField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
@@ -66,7 +66,7 @@ public class DB extends javax.swing.JFrame {
                     .add(msg, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(0, 0, Short.MAX_VALUE)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -78,7 +78,7 @@ public class DB extends javax.swing.JFrame {
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(dbPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 319, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(dbPassword))
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -119,6 +119,11 @@ public class DB extends javax.swing.JFrame {
         jButton3.setText("Cancel");
 
         jButton4.setText("OK");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,6 +156,31 @@ public class DB extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        boolean ac= true;
+
+        String DATABASE_NAME=dbName.getText();
+        String DB_USERNAME=dbUserName.getText();
+        String DB_PASSWORD=dbPassword.getText();
+        String DB_HOST=dbHost.getText();
+        String DB_TABLEPREFIX=dbTablePrefix.getText();
+        
+        //check empty input fild
+        if(dbName.getText().isEmpty()){
+            msg.setText("Requir Database Name*");
+            ac=false;
+        }else if(dbUserName.getText().isEmpty()){
+             msg.setText("Requir Database UserName*");
+            ac=false;
+        }else if(dbHost.getText().isEmpty()){
+             msg.setText("Requir Host name*");
+            ac=false;
+        }else{
+            ac = true;
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -193,7 +223,7 @@ public class DB extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField dbHost;
     private javax.swing.JTextField dbName;
-    private javax.swing.JTextField dbPassword;
+    private javax.swing.JPasswordField dbPassword;
     private javax.swing.JTextField dbTablePrefix;
     private javax.swing.JTextField dbUserName;
     private javax.swing.JButton jButton3;
