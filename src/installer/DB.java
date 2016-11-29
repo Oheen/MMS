@@ -32,11 +32,11 @@ public class DB extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Antenna");
+        setTitle("Database Configuration");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Database information "));
 
-        msg.setText("msg");
+        msg.setText("");
 
         jLabel2.setText("Database Name");
 
