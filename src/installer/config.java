@@ -33,6 +33,14 @@ public class config {
         }
         System.out.println("conntion status= " + result);
       
+          try {
+            if (result) {
+                saveEnv(DB_DATABASE, DB_USERNAME, DB_PASSWORD, DB_HOST, DB_TABLEPREFIX);
+            }
+        } catch (Exception e) {
+            System.out.println("file can not writ");
+        }
+        
         return result;
     }
     
