@@ -2,7 +2,7 @@
 package installer;
 
 public class DB extends javax.swing.JFrame {
-    
+    config checkSave = new config();
     /** Creates new form Antenna */
     public DB() {
         initComponents();
@@ -32,11 +32,11 @@ public class DB extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Database Configuration");
+        setTitle("Antenna");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Database information "));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
-        msg.setText("");
+        msg.setText("msg");
 
         jLabel2.setText("Database Name");
 
@@ -116,9 +116,14 @@ public class DB extends javax.swing.JFrame {
                 .addContainerGap(183, Short.MAX_VALUE))
         );
 
-        jButton3.setText("Cancel");
+        jButton3.setText("Break");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("OK");
+        jButton4.setText("Next");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -134,9 +139,10 @@ public class DB extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                        .add(jButton4)
+                        .add(0, 0, Short.MAX_VALUE)
+                        .add(jButton3)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton3)))
+                        .add(jButton4)))
                 .addContainerGap())
         );
 
@@ -180,7 +186,23 @@ public class DB extends javax.swing.JFrame {
         }else{
             ac = true;
         }
+        
+        //===============call congig.java method==============
+         boolean result=checkSave.saveDatabaseInfo(DATABASE_NAME,DB_USERNAME,DB_PASSWORD,DB_HOST,DB_TABLEPREFIX);
+       
+        if(result){
+            createUser setadminPage =new createUser();
+            dispose();
+            setadminPage.setVisible(true);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        welcome wPage =new welcome();
+            dispose();
+            wPage.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
     
     /**
      * @param args the command line arguments
