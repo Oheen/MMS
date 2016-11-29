@@ -36,7 +36,10 @@ public class DB extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
-        msg.setText("msg");
+        msg.setForeground(new java.awt.Color(255, 0, 0));
+        msg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        msg.setText("     ");
+        msg.setName("msg"); // NOI18N
 
         jLabel2.setText("Database Name");
 
