@@ -6,10 +6,12 @@
 package installer;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.Scanner;
 
 /**
  *
@@ -42,6 +44,46 @@ public class config {
             System.out.println("file can not writ");
         }
         
+        return result;
+    }
+    
+    public static boolean saveAdmin(String name, String email, String pass) {
+        boolean result = false;
+        Scanner sc = null;
+        String[] recFormfile = new String[50];
+        int i = 0;
+        try {
+            sc = new Scanner(new File("src/.env"));
+
+            while (sc.hasNextLine()) {
+                recFormfile[i] = sc.nextLine();
+                i++;
+            }
+            sc.close();
+                //add admin infomation on recformfile array
+        recFormfile[7] = "\r\nADMIN_USERNAME=" +name;
+        recFormfile[8] = "\r\nADMIN_EMAIL=" +email;
+        recFormfile[9] = "\r\nADMIN_PASSWORD=" +pass;
+
+        } catch (FileNotFoundException ex) {
+            System.out.println("file not foud");
+        }
+
+        //============write file .evn=============
+
+     try{
+           File configFileEnvOv = new File("src/.env");
+            FileWriter fow = new FileWriter(configFileEnvOv);
+                for(int k=0; k<9; k++){
+                    fow.write(recFormfile[i]);
+                }
+                System.out.println(recFormfile[i]);
+                
+             fow.close();
+        }catch(Exception e){
+            System.out.println("writeEvnfull problem");
+             result = false;
+        }
         return result;
     }
     
