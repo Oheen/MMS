@@ -18,9 +18,12 @@ import java.util.Scanner;
  * @author jubayed
  */
 public class config {
-    
-    static boolean saveDatabaseInfo(String DB_DATABASE, String DB_USERNAME, String DB_PASSWORD, String DB_HOST, String DB_TABLEPREFIX) {
+
+    public static boolean saveDatabaseInfo(String DB_DATABASE, String DB_USERNAME, String DB_PASSWORD, String DB_HOST, String DB_TABLEPREFIX) {
         boolean result = false;
+
+        System.out.println(DB_DATABASE + DB_USERNAME + DB_PASSWORD+DB_HOST);
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://" + DB_HOST + ":3306/" + DB_DATABASE, DB_USERNAME, DB_PASSWORD);
@@ -28,25 +31,24 @@ public class config {
             Statement stmt = con.createStatement();
             result = true;
             con.close();
-            stmt=null;
-            con=null;
-            
         } catch (Exception e) {
             System.out.println(e);
+            System.out.println("conntion status= faile");
         }
         System.out.println("conntion status= " + result);
-      
-          try {
+
+        try {
             if (result) {
+                System.out.println("sava ok");
                 saveEnv(DB_DATABASE, DB_USERNAME, DB_PASSWORD, DB_HOST, DB_TABLEPREFIX);
             }
         } catch (Exception e) {
-            System.out.println("file can not writ");
+            System.out.println(e);
         }
-        
+
         return result;
     }
-    
+
     public static boolean saveAdmin(String name, String email, String pass) {
         boolean result = false;
         Scanner sc = null;
@@ -60,33 +62,32 @@ public class config {
                 i++;
             }
             sc.close();
-                //add admin infomation on recformfile array
-        recFormfile[7] = "\r\nADMIN_USERNAME=" +name;
-        recFormfile[8] = "\r\nADMIN_EMAIL=" +email;
-        recFormfile[9] = "\r\nADMIN_PASSWORD=" +pass;
+            //add admin infomation on recformfile array
+            recFormfile[7] = "\r\nADMIN_USERNAME=" + name;
+            recFormfile[8] = "\r\nADMIN_EMAIL=" + email;
+            recFormfile[9] = "\r\nADMIN_PASSWORD=" + pass;
 
         } catch (FileNotFoundException ex) {
             System.out.println("file not foud");
         }
 
         //============write file .evn=============
-
-     try{
-           File configFileEnvOv = new File("src/.env");
+        try {
+            File configFileEnvOv = new File("src/.env");
             FileWriter fow = new FileWriter(configFileEnvOv);
-                for(int k=0; k<9; k++){
-                    fow.write(recFormfile[i]);
-                }
-                System.out.println(recFormfile[i]);
-                
-             fow.close();
-        }catch(Exception e){
+            for (int k = 0; k < 9; k++) {
+                fow.write(recFormfile[i]);
+            }
+            System.out.println(recFormfile[i]);
+
+            fow.close();
+        } catch (Exception e) {
             System.out.println("writeEvnfull problem");
-             result = false;
+            result = false;
         }
         return result;
     }
-    
+
     //===========================save information on file ================================
     private static boolean saveEnv(String DB_DATABASE, String DB_USERNAME, String DB_PASSWORD, String DB_HOST, String DB_TABLEPREFIX) {
         boolean result = false;
@@ -108,5 +109,5 @@ public class config {
         }
         return result;
     }
-    
+
 }
