@@ -28,9 +28,9 @@ public class createUser extends javax.swing.JFrame {
         save = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Admin information");
+        setTitle("Antenna");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Enter admin information"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
         msg.setForeground(new java.awt.Color(255, 0, 0));
         msg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -91,7 +91,7 @@ public class createUser extends javax.swing.JFrame {
                 .addContainerGap(235, Short.MAX_VALUE))
         );
 
-        breakPrev.setText("break");
+        breakPrev.setText("< break");
         breakPrev.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 breakPrevActionPerformed(evt);
@@ -134,6 +134,8 @@ public class createUser extends javax.swing.JFrame {
                     .add(save))
                 .addContainerGap())
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("Save Admin || Admin");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -32,7 +32,7 @@ public class DB extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Antenna");
+        setTitle("Database || MMS");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
@@ -55,7 +55,7 @@ public class DB extends javax.swing.JFrame {
 
         jLabel5.setText("Host");
 
-        dbTablePrefix.setText("jh_erp");
+        dbTablePrefix.setText("jh_");
 
         jLabel6.setText("Table Prefix");
 
@@ -119,14 +119,14 @@ public class DB extends javax.swing.JFrame {
                 .addContainerGap(183, Short.MAX_VALUE))
         );
 
-        jButton3.setText("Break");
+        jButton3.setText("< Break");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Next");
+        jButton4.setText("Next >");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -162,6 +162,8 @@ public class DB extends javax.swing.JFrame {
                     .add(jButton4))
                 .addContainerGap())
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("Datebase Configaretion ");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

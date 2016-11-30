@@ -24,11 +24,12 @@ public class license extends javax.swing.JFrame {
         btnOk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Antenna");
+        setTitle("license || MMS");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setText("Direction [°]:");
+        jLabel1.setText("Press page Down to see the rest og the agrreement");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -49,20 +50,20 @@ public class license extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 61, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        btnExit.setText("Exit");
+        btnExit.setText("< Break");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
 
-        btnOk.setText("Next");
+        btnOk.setText("Next >");
         btnOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOkActionPerformed(evt);
@@ -98,6 +99,8 @@ public class license extends javax.swing.JFrame {
                     .add(btnOk))
                 .addContainerGap())
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("License Agreement");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

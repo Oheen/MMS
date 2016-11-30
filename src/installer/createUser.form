@@ -63,6 +63,9 @@
           </Border>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Save Admin || Admin"/>
+      </AccessibilityProperties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -162,7 +165,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="breakPrev">
       <Properties>
-        <Property name="text" type="java.lang.String" value="break"/>
+        <Property name="text" type="java.lang.String" value="&lt; break"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="breakPrevActionPerformed"/>
