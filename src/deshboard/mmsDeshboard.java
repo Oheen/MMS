@@ -30,6 +30,10 @@
 
 package deshboard;
 
+import static core.env.unsetAdminLogin;
+import users.adminLogin;
+import core.pubmsg;
+
 public class mmsDeshboard extends javax.swing.JFrame {
     
     /** Creates new form Antenna */
@@ -176,7 +180,13 @@ public class mmsDeshboard extends javax.swing.JFrame {
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
-        dispose();
+        boolean result = unsetAdminLogin();
+        if(result){
+            adminLogin adLoPage = new adminLogin();
+            dispose();
+            adLoPage.setVisible(true);
+        }
+        
     }//GEN-LAST:event_exitActionPerformed
     
     /**
