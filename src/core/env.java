@@ -90,5 +90,20 @@ public class env {
         }
         return result;
     }
+    
+        public static boolean unsetAdminLogin() {
+        boolean result = false;
+        try {
+            File configFileEnv = new File(".login");
+            FileWriter fw = new FileWriter(configFileEnv);
+            fw.write("");
+            fw.close();
+            result = true;
+
+        } catch (Exception e) {
+            System.out.println("Please check your file permition.");
+        }
+        return result;
+    }
 
 }
