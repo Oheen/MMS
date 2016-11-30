@@ -32,9 +32,10 @@ public class DB extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Antenna");
+        setTitle("Datebase information");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enter Datebase information."));
+        jPanel1.setToolTipText("");
 
         msg.setForeground(new java.awt.Color(255, 0, 0));
         msg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
