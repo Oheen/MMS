@@ -32,7 +32,7 @@ public class DB extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Database || MMS");
+        setTitle("Antenna");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Position/Direction "));
 
@@ -163,8 +163,6 @@ public class DB extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.getAccessibleContext().setAccessibleName("Datebase Configaretion ");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -199,6 +197,8 @@ public class DB extends javax.swing.JFrame {
             createUser setadminPage =new createUser();
             dispose();
             setadminPage.setVisible(true);
+        }else {
+            msg.setText("Check your database conn or Enter information.");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
