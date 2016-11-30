@@ -8,7 +8,7 @@
 |___|___||___|___|_|\___|_ |
                         
 ```
-> Simple mass management system installer package [git brance installer]
+> Simple mass management system installer package [git branches installer]
 
 ## License
 
