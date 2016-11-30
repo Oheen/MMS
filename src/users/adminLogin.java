@@ -28,7 +28,7 @@ public class adminLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Panel");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enter user name and password"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enter your Email and Password:"));
 
         jLabel1.setText("Email");
 
@@ -56,18 +56,13 @@ public class adminLogin extends javax.swing.JFrame {
                     .add(jTextField1)
                     .add(adminPassword)
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(Login)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(reset))
-                            .add(jCheckBox1))
-                        .add(0, 142, Short.MAX_VALUE)))
+                        .add(Login)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(reset)
+                        .add(0, 142, Short.MAX_VALUE))
+                    .add(jCheckBox1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-
-        jPanel1Layout.linkSize(new java.awt.Component[] {Login, reset}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
-
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()

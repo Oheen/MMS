@@ -65,16 +65,12 @@
                       <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
                       <Component id="adminPassword" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="Login" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="reset" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="Login" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="reset" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="142" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="jCheckBox1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
