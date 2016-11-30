@@ -1,0 +1,10 @@
+/nbproject/private/
+/build/
+
+.login
+.env
+build.xml
+mads.java
+manifest.mf
+nbproject/
+src/.env
