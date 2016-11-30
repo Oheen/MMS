@@ -75,21 +75,21 @@
                       <Component id="msg" pref="442" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="ocation" alignment="0" max="32767" attributes="0"/>
+                              <Component id="occasionlabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="fnameLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="lnameLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="emailLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="phonelabel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="ocation1" max="32767" attributes="0"/>
+                              <Component id="Address" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="ocationin1" max="32767" attributes="0"/>
+                              <Component id="address" max="32767" attributes="0"/>
                               <Component id="fname" max="32767" attributes="0"/>
                               <Component id="lname" max="32767" attributes="0"/>
                               <Component id="email" alignment="0" max="32767" attributes="0"/>
                               <Component id="phone" max="32767" attributes="0"/>
-                              <Component id="ocationin" alignment="1" max="32767" attributes="0"/>
+                              <Component id="occasion" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -115,9 +115,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="email" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -126,13 +124,13 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ocation" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ocationin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="occasionlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="occasion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ocation1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ocationin1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Address" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="address" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -179,24 +177,24 @@
             <Property name="text" type="java.lang.String" value="   "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="ocation">
+        <Component class="javax.swing.JLabel" name="occasionlabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="ocation"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="ocationin">
+        <Component class="javax.swing.JTextField" name="occasion">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ocationinActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="occasionActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="ocation1">
+        <Component class="javax.swing.JLabel" name="Address">
           <Properties>
             <Property name="text" type="java.lang.String" value="ocation"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="ocationin1">
+        <Component class="javax.swing.JTextField" name="address">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ocationin1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addressActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -210,6 +208,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

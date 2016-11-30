@@ -27,10 +27,10 @@ public class addUsers extends javax.swing.JFrame {
         phone = new javax.swing.JTextField();
         phonelabel = new javax.swing.JLabel();
         msg = new javax.swing.JLabel();
-        ocation = new javax.swing.JLabel();
-        ocationin = new javax.swing.JTextField();
-        ocation1 = new javax.swing.JLabel();
-        ocationin1 = new javax.swing.JTextField();
+        occasionlabel = new javax.swing.JLabel();
+        occasion = new javax.swing.JTextField();
+        Address = new javax.swing.JLabel();
+        address = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         save = new javax.swing.JButton();
 
@@ -57,19 +57,19 @@ public class addUsers extends javax.swing.JFrame {
         msg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         msg.setText("   ");
 
-        ocation.setText("ocation");
+        occasionlabel.setText("ocation");
 
-        ocationin.addActionListener(new java.awt.event.ActionListener() {
+        occasion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ocationinActionPerformed(evt);
+                occasionActionPerformed(evt);
             }
         });
 
-        ocation1.setText("ocation");
+        Address.setText("ocation");
 
-        ocationin1.addActionListener(new java.awt.event.ActionListener() {
+        address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ocationin1ActionPerformed(evt);
+                addressActionPerformed(evt);
             }
         });
 
@@ -83,20 +83,20 @@ public class addUsers extends javax.swing.JFrame {
                     .add(msg, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
                     .add(mainpanelLayout.createSequentialGroup()
                         .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, ocation, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, occasionlabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, fnameLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, lnameLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, emailLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, phonelabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(ocation1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .add(Address, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(ocationin1)
+                            .add(address)
                             .add(fname)
                             .add(lname)
                             .add(email)
                             .add(phone)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, ocationin))))
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, occasion))))
                 .addContainerGap())
         );
         mainpanelLayout.setVerticalGroup(
@@ -115,25 +115,29 @@ public class addUsers extends javax.swing.JFrame {
                 .add(18, 18, 18)
                 .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(email, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(emailLabel)))
+                    .add(emailLabel))
                 .add(18, 18, 18)
                 .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(phonelabel)
                     .add(phone, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
                 .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(ocation)
-                    .add(ocationin, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(occasionlabel)
+                    .add(occasion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(mainpanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(ocation1)
-                    .add(ocationin1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(Address)
+                    .add(address, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         );
 
         jButton3.setText("Cancel");
 
         save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -173,13 +177,23 @@ public class addUsers extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneActionPerformed
 
-    private void ocationinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ocationinActionPerformed
+    private void occasionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_occasionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ocationinActionPerformed
+    }//GEN-LAST:event_occasionActionPerformed
 
-    private void ocationin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ocationin1ActionPerformed
+    private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ocationin1ActionPerformed
+    }//GEN-LAST:event_addressActionPerformed
+
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+        // TODO add your handling code here:
+        String fastName =fname.getText();
+        String lastName =lname.getText();
+        String emailAddr =email.getText();
+        String phoneN =phone.getText();
+        String occasionIN =occasion.getText();
+        String fulladdress =address.getText();
+    }//GEN-LAST:event_saveActionPerformed
     
     /**
      * @param args the command line arguments
@@ -220,6 +234,8 @@ public class addUsers extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Address;
+    private javax.swing.JTextField address;
     private javax.swing.JTextField email;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fname;
@@ -229,10 +245,8 @@ public class addUsers extends javax.swing.JFrame {
     private javax.swing.JLabel lnameLabel;
     private javax.swing.JPanel mainpanel;
     private javax.swing.JLabel msg;
-    private javax.swing.JLabel ocation;
-    private javax.swing.JLabel ocation1;
-    private javax.swing.JTextField ocationin;
-    private javax.swing.JTextField ocationin1;
+    private javax.swing.JTextField occasion;
+    private javax.swing.JLabel occasionlabel;
     private javax.swing.JTextField phone;
     private javax.swing.JLabel phonelabel;
     private javax.swing.JButton save;
