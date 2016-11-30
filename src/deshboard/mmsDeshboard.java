@@ -89,6 +89,11 @@ public class mmsDeshboard extends javax.swing.JFrame {
         users.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/ic_people_2x.png"))); // NOI18N
         users.setToolTipText("");
         users.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        users.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usersActionPerformed(evt);
+            }
+        });
 
         bazarList1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/ic_language_black_24dp_2x.png"))); // NOI18N
         bazarList1.setToolTipText("");
@@ -188,6 +193,11 @@ public class mmsDeshboard extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_exitActionPerformed
+
+    private void usersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usersActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_usersActionPerformed
     
     /**
      * @param args the command line arguments
