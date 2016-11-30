@@ -8,6 +8,10 @@
 |___|___||___|___|_|\___|_ |
                         
 ```
+# mysql server required on 
+
+windows base file system
+
 > Simple mass management system installer package [git branches installer]
 
 ## License
