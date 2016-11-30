@@ -8,3 +8,7 @@ mads.java
 manifest.mf
 nbproject/
 src/.env
+.jpg
+.ttf
+src/installer/fonts
+libs/*
