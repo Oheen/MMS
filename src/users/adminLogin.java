@@ -18,29 +18,34 @@ public class adminLogin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        password = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        passwordLabel = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
-        adminPassword = new javax.swing.JPasswordField();
-        Login = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
+        login = new javax.swing.JButton();
         reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Panel");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Enter your Email and Password:"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("User name and password"));
 
         jLabel1.setText("Email");
 
-        password.setText("Password");
+        passwordLabel.setText("Password");
 
         jCheckBox1.setText("Remember Me");
         jCheckBox1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jCheckBox1.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-        Login.setText("Login");
+        login.setText("Login");
 
         reset.setText("reset");
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -50,13 +55,13 @@ public class adminLogin extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(password, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                    .add(passwordLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextField1)
-                    .add(adminPassword)
+                    .add(email)
+                    .add(password)
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(Login)
+                        .add(login)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(reset)
                         .add(0, 142, Short.MAX_VALUE))
@@ -69,17 +74,17 @@ public class adminLogin extends javax.swing.JFrame {
                 .add(72, 72, 72)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel1)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(email, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(password)
-                    .add(adminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(passwordLabel)
+                    .add(password, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jCheckBox1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(reset)
-                    .add(Login))
+                    .add(login))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -102,6 +107,11 @@ public class adminLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_resetActionPerformed
     
     /**
      * @param args the command line arguments
@@ -143,13 +153,13 @@ public class adminLogin extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Login;
-    private javax.swing.JPasswordField adminPassword;
+    private javax.swing.JTextField email;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel password;
+    private javax.swing.JButton login;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton reset;
     // End of variables declaration//GEN-END:variables
     
