@@ -1,6 +1,7 @@
 package users;
 
 import static core.env.adminLogin;
+import deshboard.mmsDeshboard;
 
 public class adminLogin extends javax.swing.JFrame {
     
@@ -145,7 +146,9 @@ public class adminLogin extends javax.swing.JFrame {
         boolean result = adminLogin(adminEmail, adminPassword, adminRemember);
         System.out.println(result);
         if(result){
+            mmsDeshboard mDes = new mmsDeshboard();
             dispose();
+            mDes.setVisible(true);
 
         }else{
              msg.setText("Invalid Email or Password. ");
