@@ -1,5 +1,6 @@
-
 package users;
+
+import static core.env.adminLogin;
 
 public class adminLogin extends javax.swing.JFrame {
     
@@ -20,7 +21,7 @@ public class adminLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        remember = new javax.swing.JCheckBox();
         password = new javax.swing.JPasswordField();
         login = new javax.swing.JButton();
         reset = new javax.swing.JButton();
@@ -34,11 +35,16 @@ public class adminLogin extends javax.swing.JFrame {
 
         passwordLabel.setText("Password");
 
-        jCheckBox1.setText("Remember Me");
-        jCheckBox1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        jCheckBox1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        remember.setText("Remember Me");
+        remember.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        remember.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         login.setText("Login");
+        login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginActionPerformed(evt);
+            }
+        });
 
         reset.setText("reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +71,7 @@ public class adminLogin extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(reset)
                         .add(0, 142, Short.MAX_VALUE))
-                    .add(jCheckBox1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(remember, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -80,7 +86,7 @@ public class adminLogin extends javax.swing.JFrame {
                     .add(passwordLabel)
                     .add(password, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jCheckBox1)
+                .add(remember)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(reset)
@@ -110,8 +116,22 @@ public class adminLogin extends javax.swing.JFrame {
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
+        email.setText("");
+        password.setText("");
         
     }//GEN-LAST:event_resetActionPerformed
+
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+        // TODO add your handling code here:
+        String adminEmail=email.getText();
+        String adminPassword=password.getText();
+        boolean adminRemember=remember.isSelected();
+        boolean result = adminLogin(adminEmail, adminPassword, adminRemember);
+        if(result){
+            dispose();
+
+        }
+    }//GEN-LAST:event_loginActionPerformed
     
     /**
      * @param args the command line arguments
@@ -154,12 +174,12 @@ public class adminLogin extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel passwordLabel;
+    private javax.swing.JCheckBox remember;
     private javax.swing.JButton reset;
     // End of variables declaration//GEN-END:variables
     
